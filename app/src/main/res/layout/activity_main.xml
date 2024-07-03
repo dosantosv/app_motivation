@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.MainActivity">
+
+
+    <LinearLayout
+        android:id="@+id/linear_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        android:background="@color/purple">
+
+        <ImageView
+            android:id="@+id/image_all"
+            android:src="@drawable/ic_all_inclusive"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"/>
+
+        <ImageView
+            android:id="@+id/image_happy"
+            android:src="@drawable/ic_happy"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"/>
+
+        <ImageView
+            android:id="@+id/image_bookmark"
+            android:src="@drawable/ic_bookmark"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:padding="10dp"
+        android:layout_marginTop="16dp"
+        android:id="@+id/linear_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/linear_header">
+
+        <TextView
+            android:id="@+id/text_username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/ol_kotlin"
+            android:fontFamily="@font/cabin"
+            android:gravity="center"/>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_marginTop="150dp"
+        android:id="@+id/relative_body"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/linear_title" >
+
+        <TextView
+            android:id="@+id/text_body"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/cabin"
+            android:textSize="22sp"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:padding="16dp"
+            android:text="@string/app_name" />
+
+        <View
+            android:layout_width="128dp"
+            android:backgroundTint="@color/dark_purple"
+            android:layout_height="3dp"
+            android:elevation="5dp"
+            android:layout_below="@id/text_body"
+            android:layout_centerHorizontal="true"
+            android:background="@color/black"/>
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/button_new_phrase"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:backgroundTint="@color/dark_purple"
+        android:layout_marginBottom="32dp"
+        android:fontFamily="@font/cabin"
+        android:text="@string/new_phrase" />
+
+
+</RelativeLayout>
