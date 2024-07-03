@@ -54,7 +54,7 @@
             android:id="@+id/text_username"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/ol_kotlin"
+            android:text="@string/hello"
             android:fontFamily="@font/cabin"
             android:gravity="center"/>
 

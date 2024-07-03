@@ -12,4 +12,10 @@ class MotivationConstants private constructor() {
         const val BOOKMARK = 3
     }
 
+    object LANGUAGE {
+        const val PORTUGUESE = "pt"
+        const val FRENCH = "fr"
+        const val ENGLISH = "en"
+    }
+
 }

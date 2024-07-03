@@ -10,10 +10,12 @@ import com.example.motivationapp.R
 import com.example.motivationapp.data.Mock
 import com.example.motivationapp.infra.SecurityPreferences
 import com.example.motivationapp.databinding.ActivityMainBinding
+import java.util.Locale
 
-class MainActivity : AppCompatActivity(), View.OnClickListener {`
+class MainActivity : AppCompatActivity(), View.OnClickListener {
 
     private lateinit var binding: ActivityMainBinding
+    private val mock: Mock = Mock()
     private var categoryId = 1
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -71,11 +73,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {`
     }
 
     private fun handleNewPhrase(id: Int) {
-        val mock: Mock = Mock()
-
-        val phrase: String = mock.getPhrase(id)
-
-        binding.textBody.text = phrase
+        binding.textBody.text = mock.getPhrase(id, Locale.getDefault().language)
     }
 
     private fun handleFilter(id: Int) {
@@ -110,6 +108,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {`
 
     private fun showUsername() {
         val name = SecurityPreferences(this).getString(MotivationConstants.KEY.USER_NAME)
-        binding.textUsername.text = "Olá, $name!"
+        val hello = getString(R.string.hello) + ", " + name
+        binding.textUsername.text = hello
     }
 }
