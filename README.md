@@ -1,1 +1,1 @@
-Projeto utilizando para estudar Kotlin/Android
+Projeto utilizado para estudar Kotlin/Android
